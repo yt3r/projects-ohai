@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather API</title>
+</head>
+<body>
+  <h1 id="place"></h1>
+  <h3 id="weather-type"></h3>
+  <button id="toggle-degree"></button>
+  <h3 id="degree"></h3>
+  <h3 id="weather-icon"></h3>
+
+  <script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    if(!navigator.geoLocation){
+      /**place.innerHTML = "geoLocation failed";
+
+      return;
+      */
+      const ipApiURL = "http://ip-api.com/json";
+      
+    } else {
+      const pos = navigator.geoLocation.getCurrentPosition();
+      const lat = pos.coords.latitude;
+      console.log(lat);
+      const lon = pos.coords.longitude;
+      console.log(lon);
+      place.innerHTML = "Latitude: " +lat +"<br>Longitude: " +lon;
+    }
+  });
+  </script>
+</body>
+</html>

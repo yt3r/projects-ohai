@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsla(120, 84%, 60%, 1);
+  color: hsla(239, 84%, 60%, 1);
+  width: 85%;
+  margin: auto;
+  padding: 20px 0;
+}
+
+#form, input, button, #results {
+  font-family: 'VT323', monospace;
+}
+
+#form {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+form , button {
+    font-size: 1.5rem;
+    height: auto;
+}
+
+input {
+  border: 2px solid hsla(239, 84%, 60%, 1);
+  border-radius: 8px;
+
+}
+
+a, button {
+  border: none;
+  border-radius: 3px;
+  background-color: hsla(0, 0%, 95%, 1);
+  text-decoration: none;
+  margin-top: 2px;
+  padding: 2px 4px;
+  color: inherit;
+}
+
+#results {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#results article {
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+#results article h3 {
+  font-weight: 400;
+}
+
+.visited {
+  color: hsla(60, 84%, 60%, 1);
+}
