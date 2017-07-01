@@ -14,14 +14,41 @@
   <h3 id="weather-icon"></h3>
 
   <script type="text/javascript">
+
+  function getForecast(loc){
+    const key = '1653283a22ccbc03b35ef6574db1fbd4'
+    let uri = 'https://crossorigin.me/https://api.darksky.net/forecast/' + key +'/' + loc; //https://crossorigin.me/ for codepen
+    let req = new XMLHttpRequest();
+    req.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+              forecast = JSON.parse(this.response);
+              console.log(forecast);
+      }
+    };
+    req.open('GET', uri, true);
+    req.send();
+  }
+
+  function getCoords() {
+    const ipApiURL = "https://ipinfo.io/json/";
+    let req = new XMLHttpRequest();
+    req.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+              let data = JSON.parse(this.response);
+              document.getElementById('place').textContent = data.city;
+              getForecast(data.loc);
+      }
+    };
+    req.open('GET', ipApiURL, true);
+    req.send();
+  }
+
   document.addEventListener('DOMContentLoaded', function() {
     if(!navigator.geoLocation){
-      /**place.innerHTML = "geoLocation failed";
 
-      return;
-      */
-      const ipApiURL = "http://ip-api.com/json";
-      
+    getCoords();
+    //console.log(data);
+
     } else {
       const pos = navigator.geoLocation.getCurrentPosition();
       const lat = pos.coords.latitude;
