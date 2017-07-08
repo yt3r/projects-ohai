@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'Lazer-84';
+  src: url('Lazer84.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 3rem auto;
+  width: 80%;
+
+}
+
+#mainNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+button {
+  font-size: 2rem;
+  font-family: 'Lazer-84', cursive;
+  border: none;
+  margin: 0.7rem;
+  margin-bottom: 0;
+  padding: 0.4rem 0.6rem;
+  background-color: hsla(44, 91%, 50%, 1);
+  color: hsla(290, 59%, 40%, 1);
+  color: linear-gradient(to bottom, hsla(290,59%,40%,1) 0%, hsla(198,100%,63%,1) 100%);
+  color: -webkit-linear-gradient(top, hsla(290,59%,40%,1) 0%, hsla(198,100%,63%,1) 100%);
+}
+
+#results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: hsla(44, 91%, 50%, 1);
+}
+
+.card {
+  color: hsla(198, 100%, 63%, 1);
+  background-size: cover;
+  margin: 0.4rem 0;
+  padding: 0.5rem 1rem;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+}
+
+.bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+img {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+}
+.viewers {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}

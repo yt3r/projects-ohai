@@ -4,20 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
   <title>Twitch API</title>
 </head>
 <body>
 
   <section id="mainNav">
-    <button>All</button>
-    <button>Online</button>
-    <button>Offline</button>
+    <button>ALL</button>
+    <button>ONLINE</button>
+    <button>OFFLINE</button>
   </section>
 
   <section id="results">
 
   </section>
 
+  <template id='tmplate'>
+    <div class='card'>
+
+      <h2 class="stream-name"></h2>
+      <h3 class="game-name"></h3>
+      <h3 class="stream-stat"></h3>
+
+      <div class="bottom">
+        <img src="" alt="" class="logo">
+        <h3 class="display-name"></h3>
+        <h3 class="viewers"></h3>
+      </div>
+
+    </div>
+  </template>
   <script src="./test.js" charset="utf-8"></script>
 </body>
 </html>
