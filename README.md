@@ -1,2 +1,2 @@
 # projects-ohai
-projects from desktop
+FreeCodeCamp front-end projects
