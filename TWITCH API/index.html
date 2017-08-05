@@ -10,35 +10,67 @@
 </head>
 <body>
 
-  <section id="mainNav">
-    <button id='all' class="active">ALL</button>
-    <button id='on'>ONLINE</button>
-    <button id='off'>OFFLINE</button>
-  </section>
+	<div class="main">
+	
+		<nav id="main-nav">
+			<button id='all' class="active">ALL</button>
+			<button id='online'>ONLINE</button>
+			<button id='offline'>OFFLINE</button>
+		</nav>
 
-  <section id="results">
+		<section id="results">
 
-  </section>
-
-  <template id='tmplate'>
+		</section>
+	  
+	</div>
+ 
+  <template id='active'>
+  
     <div class='card'>
+	
       <div class="left">
-        <h2 class="stream-name"></h2>
-        <h3 class="game-name"></h3>
-        <h3 class="stream-stat"></h3>
-        <h3 class="viewers"></h3>
+	  
+		<div class="left-top">
+			<h1 class="stream-name"></h1>
+			<h3 class="game-name"></h3>
+			<h3 class="stream-stat"></h3>
+		</div>
 
-        <!--<div class="bottom"> -->
+        <div class="left-bottom">
           <img src="" alt="" class="logo">
           <h3 class="display-name"></h3>
-
-        <!--</div> -->
+        </div>
+		
       </div>
 
       <img src="" alt="" class="preview">
 
     </div>
+	
   </template>
-  <script src="./test.js" charset="utf-8"></script>
+  
+  <template id="inactive">
+  
+  	<div class="card">
+	
+  		<div class="left">
+		
+			<div class="left-top">
+				<h1 class="stream-name"></h1>
+			</div>
+			
+			<div class="left-bottom">
+				<h3 class="display-name"></h3>
+			</div>
+			
+		</div>
+		
+		<img src="./inactive.png" alt="Inactive channel" class="preview">
+		
+  	</div>
+	
+  </template>
+  
+  <script src="./main.js" charset="utf-8"></script>
 </body>
 </html>

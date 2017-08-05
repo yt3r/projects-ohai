@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+pale-gold = #c0b283;
+silk = #dcd0c0;
+paper = #f4f4f4;
+charcoal = #373737;
+*/
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem auto;
+  min-width: 40rem;
+}
+
+body, #degree {
+  font-family: 'Dosis', sans-serif;
+}
+
+h1, h3 {
+  color: #373737;
+}
+
+h1, h3, #degree {
+  margin: 0.6rem auto;
+}
+
+#degree {
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.3rem 0.6rem;
+  display: none;
+}
+
+#degree[data-degree='cel'] {
+  background-color: #c0b283;
+}
+
+#degree[data-degree='fah'] {
+  background-color: #dcd0c0;
+}
